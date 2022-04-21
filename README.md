@@ -1,4 +1,4 @@
-# kanaquiz-telegram-bot (v0.0.1)
+# kanaquiz-telegram-bot (v0.1.2)
 
 This is my first Python project =w=
 
