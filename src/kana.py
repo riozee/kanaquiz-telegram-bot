@@ -97,17 +97,18 @@ def random_kana():
         res[2] = res[2][0] + res[2]  # ka => kka
     # any characters except n, to lengthen its vowel
     if idx != 42 and random.random() < 0.15:
-        match res[2][-1]:
-            case "a":
-                res[0] += "あ"
-            case "i":
-                res[0] += "い"
-            case "u":
-                res[0] += "う"
-            case "e":
-                res[0] += "え"
-            case "o":
-                res[0] += "お"
+        if res[2][-1] == "a":
+            res[0] += "あ"
+        elif res[2][-1] == "i":
+            res[0] += "い"
+        elif res[2][-1] == "u":
+            res[0] += "う"
+        elif res[2][-1] == "e":
+            res[0] += "え"
+        elif res[2][-1] == "o":
+            res[0] += "お"
+        else:
+            res[0] += "ー"
         res[1] += "ー"
         res[2] += res[2][-1]
     return res
